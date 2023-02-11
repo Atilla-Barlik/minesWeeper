@@ -49,21 +49,9 @@ namespace minesWeeper
 
         private void deneme_Click(object sender, EventArgs e)
         {
-
-
-            /*PictureBox pictureBox1 = new PictureBox();
-            System.Threading.Thread.Sleep(1000);
-            SendKeys.Send("{PRTSC}");
-            Image myImage = Clipboard.GetImage();
-            pictureBox1.Image = myImage;
-
-            myImage.Save("C:\\abc.jpg");*/
-
             Bitmap  bitmap = DrawControlToBitmap(panel1);
-
             bitmap.Save("mine.bmp");
             System.Diagnostics.Process.Start("mine.bmp");
-
         }
 
         private static Bitmap DrawControlToBitmap(Control control)
@@ -75,8 +63,6 @@ namespace minesWeeper
             return bitmap;
         }
 
-        
-
         private void CreateButton_Click(object sender, EventArgs e)
         {
             
@@ -86,7 +72,6 @@ namespace minesWeeper
             int mineCount = Convert.ToInt32(mineCountTextBox.Text);
             
             mineArea mA1 = new mineArea(x, y, mineCount);
-            //results.Text = mA1.X.ToString() + mA1.Y.ToString() + mA1.MineCount.ToString();
             h = mA1.X + 2;
             w = mA1.Y + 2;
             mC = mA1.MineCount;
@@ -130,13 +115,8 @@ namespace minesWeeper
 
                 mineArrayXY[i] = mineX * 100 + mineY;
 
-                //mineArrayY[i] = mineY;
-                //labelX.Text += mineArrayXY[i].ToString() + "- " + i.ToString() + "\n";
-
-                //labelY.Text += mineY.ToString();
             }
             mineArrayXY[0] = 0;
-            //mineArrayXY[mC] = 0;
             mineArrayY[0] = 0;
             mineArrayY[w] = 0;
 
@@ -191,19 +171,6 @@ namespace minesWeeper
             }
 
 
-            /*for (int i = 0; i < h; i++)
-            {
-                for (int j = 0; j < w; j++)
-                {
-                    labelY.Text += numbers[i, j].ToString();
-                    //if (w - 1 == j)
-                       // labelY.Text += "\n";
-                }
-
-            }*/
-
-
-
             int btnNo = 0;
             for (int i = 0; i < h; i++)             //buttonlar ile tarlayı oluşturuyoruz
             {
@@ -250,7 +217,6 @@ namespace minesWeeper
                             }
 
                         }
-                        //sayac.Text = say.ToString() + "\n";
                     }
 
 
@@ -259,12 +225,6 @@ namespace minesWeeper
                     panel1.Controls.Add(cell);  // hücreyi, buttonu panele ekliyoruz
                 }
             }
-            /*foreach (int l in mineArrayXY)
-            {
-                emptyControl.Text += l.ToString() + "\n";
-            }
-            */
-
             emptyCellCoordinatesX = new int[h * w];
             emptyCellCoordinatesY = new int[h * w];
 
@@ -375,10 +335,6 @@ namespace minesWeeper
                     thisButton.Tag = "10";
                 }   
             }
-
-            //results.Text = xIndex.ToString() + " " + yIndex.ToString();
-
-
         }
 
 

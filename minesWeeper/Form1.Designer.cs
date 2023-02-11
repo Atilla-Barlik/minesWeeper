@@ -213,7 +213,7 @@ namespace minesWeeper
             // GameStatusLabel
             // 
             this.GameStatusLabel.AutoSize = true;
-            this.GameStatusLabel.Location = new System.Drawing.Point(360, 67);
+            this.GameStatusLabel.Location = new System.Drawing.Point(363, 93);
             this.GameStatusLabel.Name = "GameStatusLabel";
             this.GameStatusLabel.Size = new System.Drawing.Size(0, 13);
             this.GameStatusLabel.TabIndex = 19;
